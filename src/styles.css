@@ -1,14 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 .parent-div{
     border: 2px solid red;
-    padding: 23px;
+    padding: 35px;
     background: #ff000029;
+    position: relative;
+}
+.parent-div::before {
+    content: 'Parent Component';
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    background: #ffffff;
+    border: 2px solid indianred;
+    padding: 4px;
+    text-transform: capitalize;
+    color: #970000;
 }
 .child-div{
-    margin-top: 20px;
+    margin-top: 80px;
     border: 2px solid rgb(12, 114, 51);
-    padding: 23px;
+    padding:35px;
     background: #00ff7936;
+    position: relative;
+    min-height: 300px;
+}
+.child-div::before {
+    content: 'Child Component';
+    position: absolute;
+    top: 25%;
+    left: -13px;
+    background: #ffffff;
+    border: 2px solid rgb(12, 114, 51);
+    padding: 4px;
+    text-transform: capitalize;
+    color: #970000;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 11px;
 }
 
 .child-div .btn{
@@ -17,4 +45,5 @@
     border: 2px solid #989fe5;
     background: #d7d6ff;
     border-radius: 13px;
+    cursor: pointer;
 }
