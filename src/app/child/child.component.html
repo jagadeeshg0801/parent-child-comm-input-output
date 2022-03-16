@@ -3,6 +3,9 @@
 </h4>
 <div>
     <label>Enter New Name</label>
-    <input type="text" [(ngModel)]="c_name"/>
+    <input type="text" [(ngModel)]="c_name"/> 
     <button class="btn" (click)="sendDataToParent()">Update Name in Parent</button>
+    <br>
+    <span class="info-text" style="font-size: 11px;"> (If User enters New name here, and  click on button then name will be updated in Parent component's text box)</span>
+
 </div>
