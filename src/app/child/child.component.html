@@ -1,0 +1,8 @@
+<h4>
+  As per Parent's Component,   Your Name is::  <b><u>{{childName}}  </b>
+</h4>
+<div>
+    <label>Enter New Name</label>
+    <input type="text" [(ngModel)]="c_name"/>
+    <button class="btn" (click)="sendDataToParent()">Update Name in Parent</button>
+</div>

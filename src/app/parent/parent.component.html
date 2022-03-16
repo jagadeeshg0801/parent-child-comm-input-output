@@ -1,0 +1,12 @@
+
+<div class="parent-div">
+    <div class="form-panel">
+        <label>Enter Your Name</label>
+        <input [(ngModel)]="parentName"/>
+    </div>
+
+    <div class="child-div">
+        <app-child [childName]="parentName" (sendChildEvent)="receiveChildData($event)"></app-child>
+    </div>
+   
+</div>

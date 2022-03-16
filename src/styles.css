@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+.parent-div{
+    border: 2px solid red;
+    padding: 23px;
+    background: #ff000029;
+}
+.child-div{
+    margin-top: 20px;
+    border: 2px solid rgb(12, 114, 51);
+    padding: 23px;
+    background: #00ff7936;
+}
+
+.child-div .btn{
+    padding: 6px;
+    margin-left: 10px;
+    border: 2px solid #989fe5;
+    background: #d7d6ff;
+    border-radius: 13px;
+}
