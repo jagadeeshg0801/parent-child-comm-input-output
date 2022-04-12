@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 export class ChildComponent implements OnInit, OnChanges {
 
   @Input('childName') childName:string;
+  @Input('childObj') childObj: any;
   @Output() sendChildEvent =  new EventEmitter();
   c_name = '';
   constructor() { }
@@ -20,6 +21,7 @@ export class ChildComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    console.log('parentObject', this.childObj)
       // if(changes && changes['childName'] && changes['childName'].currentValue != changes['childName'].previousValue){
       //   this.c_name = changes['childName'].currentValue;
       // }

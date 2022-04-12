@@ -2,11 +2,11 @@
 <div class="parent-div">
     <div class="form-panel">
         <label>Enter Your Name</label>
-        <input [(ngModel)]="parentName"/> <span class="info-text" style="font-size: 11px;"> (If User enters name here, then name will prints in child component)</span>
+        <input [(ngModel)]="parentName" (keypress)="updateParentName()"> <span class="info-text" style="font-size: 11px;"> (If User enters name here, then name will prints in child component)</span>
     </div>
 
     <div class="child-div">
-        <app-child [childName]="parentName" (sendChildEvent)="receiveChildData($event)"></app-child>
+        <app-child [childName]="parentName" [childObj]="parentObject" (sendChildEvent)="receiveChildData($event)"></app-child>
     </div>
    
 </div>

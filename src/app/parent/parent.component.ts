@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
   parentName: string ;
+  parentObject: any;
   constructor() { }
 
   ngOnInit(): void {
@@ -14,6 +15,11 @@ export class ParentComponent implements OnInit {
 
   receiveChildData(event: string){
     this.parentName = event;
+  }
+
+  updateParentName(){
+    this.parentObject = {'name': this.parentName, 'roles': ['USER', 'ADMIN']};
+
   }
 
 }
